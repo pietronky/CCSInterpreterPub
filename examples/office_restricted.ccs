@@ -1,0 +1,9 @@
+{-# OPTIONS_CCS -nat-max 0 #-}
+
+Cs = \overline{pub}.\overline{coin}.coffee.Cs;
+
+Cm = coin.\overline{coffee}.Cm;
+
+Office = (Cs | Cm) \ {coin, coffee};
+
+Main = Office;

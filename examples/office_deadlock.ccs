@@ -1,0 +1,9 @@
+{-# OPTIONS_CCS -nat-max 0 #-}
+
+Ca = \overline{coin}.coffee.Ca;
+
+Ctm_1 = coin.\overline{coffee}.Ctm_1 + coin.\overline{tea}.Ctm_1;
+
+Office_deadlock = (Ca | Ctm_1) \ {coin, coffee, tea};
+
+Main = Office_deadlock;

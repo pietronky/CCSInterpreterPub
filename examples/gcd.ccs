@@ -1,0 +1,9 @@
+{-# OPTIONS_CCS -nat-max 50 #-}
+
+Gcd(x : Nat, y : Nat) =
+	if y = 0 then
+		\overline{return}(x).0 +
+	if \neg{y = 0} then
+		Gcd(y, x - y \cdot (x / y));
+
+Main = Gcd(45, 30);

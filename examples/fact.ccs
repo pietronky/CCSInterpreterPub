@@ -1,0 +1,11 @@
+{-# OPTIONS_CCS -nat-max 125 #-}
+
+Fact_rec(acc : Nat, curr : Nat, max : Nat) =
+  if curr = max then
+    \overline{return}(acc).0 +
+  if \neg{curr = max} then
+    Fact_rec(acc \cdot (acc + 1), curr + 1, max);
+
+Fact(x : Nat) = Fact_rec(1, 1, x);
+
+Main = Fact(5);

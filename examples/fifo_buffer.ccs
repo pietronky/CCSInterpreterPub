@@ -1,0 +1,7 @@
+{-# OPTIONS_CCS -nat-max 2 #-}
+
+F_2 = in(x : Nat).F_1(x);
+F_1(x : Nat) = \overline{out}(x).F_2 + in(y : Nat).F_0(x, y);
+F_0(x : Nat, y : Nat) = \overline{out}(x).F_1(y);
+G = \overline{in}(2).G;
+Main = (G | F_2) \ {in};

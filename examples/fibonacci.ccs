@@ -1,0 +1,11 @@
+{-# OPTIONS_CCS -nat-max 125 #-}
+
+Fib_rec(m : Nat, n : Nat, curr_index : Nat, threshold : Nat) =
+    if curr_index = threshold then
+        \overline{return}(n).0 +
+    if \neg{curr_index = threshold} then
+        Fib_rec(n, m + n, curr_index + 1, threshold);
+
+Fib(x : Nat) = Fib_rec(1, 1, 1, x);
+
+Main = Fib(9);
